@@ -1,114 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f6">
   <title>Forever Mine ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main id="app">
+<main id="app">
 
-    <!-- PAGE 1: WELCOME -->
-    <section class="page active" id="page1">
-      <div class="welcome-content">
-        <p class="small-text">A little surprise for you</p>
-        <div class="gift">🎁</div>
-        <h1>Something Special</h1>
-        <p>Made with love, just for you.</p>
-        <button onclick="nextPage()">Let's Begin ❤️</button>
-      </div>
-    </section>
+  <!-- PAGE 1: WELCOME -->
+  <section class="page active" id="page1">
+    <div class="welcome-content">
+      <p class="small-text">A little surprise for you</p>
+      <div class="gift">🎁</div>
+      <h1>Something Special</h1>
+      <p>Made with love, just for you.</p>
+      <button onclick="nextPage()">Let's Begin ❤️</button>
+    </div>
+  </section>
 
-    <!-- PAGE 2: BLUE HEART -->
-    <section class="page" id="page2">
-      <div class="blue-heart">💙</div>
-      <h1>I Love You</h1>
-      <p>A little surprise for you...</p>
-      <button onclick="nextPage()">Continue</button>
-    </section>
+  <!-- PAGE 2: BLUE HEART -->
+  <section class="page" id="page2">
+    <div class="blue-heart">💙</div>
+    <h1>I Love You</h1>
+    <p>A little surprise for you...</p>
+    <button onclick="nextPage()">Continue →</button>
+  </section>
 
-    <!-- PAGE 3: CAMERA -->
-    <section class="page" id="page3">
-      <div class="camera">📷</div>
-      <h1>Our Memories</h1>
-      <p>Every moment is special.</p>
-      <button onclick="nextPage()">Continue</button>
-    </section>
+  <!-- PAGE 3: OUR MEMORIES -->
+  <section class="page" id="page3">
+    <div class="memories-container">
+      <p class="memories-top">Together Forever ♡</p>
 
-    <!-- PAGE 4: BLACK BALLOONS -->
-    <section class="page" id="page4">
-      <div class="balloons">🎈 🖤 🎈</div>
-      <h1>Special Moments</h1>
-      <button onclick="nextPage()">Continue</button>
-    </section>
+      <img
+        src="memories.jpg"
+        alt="Our Memories"
+        class="memories-image"
+      >
 
-    <!-- PAGE 5: FOUR PHOTOS -->
-    <section class="page" id="page5">
-      <h1>Our Memories 📸</h1>
-      <div class="photo-grid">
-        <div class="photo">Photo 1</div>
-        <div class="photo">Photo 2</div>
-        <div class="photo">Photo 3</div>
-        <div class="photo">Photo 4</div>
-      </div>
-      <button onclick="nextPage()">Continue</button>
-    </section>
+      <h1 class="memories-title">Our Memories</h1>
 
-    <!-- PAGE 6: FOUR LETTERS -->
-    <section class="page" id="page6">
-      <h1>Love Letters 💌</h1>
-      <div class="letters">
-        <button onclick="openLetter(1)">Letter 1 💌</button>
-        <button onclick="openLetter(2)">Letter 2 💌</button>
-        <button onclick="openLetter(3)">Letter 3 💌</button>
-        <button onclick="openLetter(4)">Letter 4 💌</button>
-      </div>
-      <p id="letterMessage"></p>
-      <button onclick="nextPage()">Continue</button>
-    </section>
+      <p>Every moment is special... 💗</p>
 
-    <!-- PAGE 7: LOVE NOTE -->
-    <section class="page" id="page7">
-      <div class="envelope">💌</div>
-      <h1>A Little Love Note</h1>
-      <p>You make every moment beautiful.</p>
-      <button onclick="nextPage()">Continue</button>
-    </section>
+      <button onclick="nextPage()">Continue →</button>
+    </div>
+  </section>
 
-    <!-- PAGE 8: FIVE QUESTIONS -->
-    <section class="page" id="page8">
-      <h1>Love Questions ❤️</h1>
-      <div id="questions"></div>
-      <button onclick="submitAnswers()">Submit Answers</button>
-      <p id="answerMessage"></p>
-    </section>
+  <!-- PAGE 4: BLACK BALLOONS -->
+  <section class="page" id="page4">
+    <div class="black-balloons">
+      🖤 🎈 🖤 🎈 🖤
+    </div>
+    <h1>Special Moments</h1>
+    <p>Every moment with you is beautiful.</p>
+    <button onclick="nextPage()">Continue →</button>
+  </section>
 
-    <!-- PAGE 9: FINAL SURPRISE -->
-    <section class="page" id="page9">
-      <div class="final-hearts">🖤 🎈 🖤</div>
-      <h1>My Special Person</h1>
-      <p>You mean so much to me.</p>
-      <button onclick="nextPage()">One More Surprise ❤️</button>
-    </section>
+  <!-- PAGE 5: FOUR PHOTOS -->
+  <section class="page" id="page5">
+    <h1>Our Memories 📸</h1>
 
-    <!-- PAGE 10: ENDING -->
-    <section class="page" id="page10">
-      <h1>Forever & Always</h1>
-      <div class="photo-grid">
-        <div class="photo">Photo 1</div>
-        <div class="photo">Photo 2</div>
-        <div class="photo">Photo 3</div>
-        <div class="photo">Photo 4</div>
-      </div>
-      <div class="final-hearts">🖤 🖤 🖤</div>
-      <h2>Forever Mine ❤️</h2>
-    </section>
+    <div class="photo-grid">
+      <div class="photo">Photo 1</div>
+      <div class="photo">Photo 2</div>
+      <div class="photo">Photo 3</div>
+      <div class="photo">Photo 4</div>
+    </div>
 
-  </main>
+    <button onclick="nextPage()">Continue →</button>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- PAGE 6: FOUR LETTERS -->
+  <section class="page" id="page6">
+    <h1>Love Letters 💌</h1>
+
+    <div class="letters">
+      <button onclick="openLetter(1)">Letter 1 💌</button>
+      <button onclick="openLetter(2)">Letter 2 💌</button>
+      <button onclick="openLetter(3)">Letter 3 💌</button>
+      <button onclick="openLetter(4)">Letter 4 💌</button>
+    </div>
+
+    <p id="letterMessage"></p>
+
+    <button onclick="nextPage()">Continue →</button>
+  </section>
+
+  <!-- PAGE 7: LOVE NOTE -->
+  <section class="page" id="page7">
+    <div class="envelope">💌</div>
+    <h1>A Little Love Note</h1>
+    <p>You make every moment beautiful.</p>
+    <button onclick="nextPage()">Continue →</button>
+  </section>
+
+  <!-- PAGE 8: FIVE PARAGRAPH QUESTIONS -->
+  <section class="page" id="page8">
+    <h1>Love Questions ❤️</h1>
+    <p>Answer these five questions from your heart.</p>
+
+    <div id="questions"></div>
+
+    <button onclick="submitAnswers()">Submit Answers ❤️</button>
+
+    <p id="answerMessage"></p>
+  </section>
+
+  <!-- PAGE 9: FINAL SURPRISE -->
+  <section class="page" id="page9">
+    <div class="final-hearts">🖤 🎈 🖤 🎈 🖤</div>
+    <h1>My Special Person</h1>
+    <p>You mean so much to me.</p>
+    <button onclick="nextPage()">One More Surprise ❤️</button>
+  </section>
+
+  <!-- PAGE 10: FINAL MEMORIES -->
+  <section class="page" id="page10">
+    <h1>Forever & Always</h1>
+
+    <div class="photo-grid">
+      <div class="photo">Photo 1</div>
+      <div class="photo">Photo 2</div>
+      <div class="photo">Photo 3</div>
+      <div class="photo">Photo 4</div>
+    </div>
+
+    <div class="final-hearts">🖤 🖤 🖤</div>
+    <h2>Forever Mine ❤️</h2>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
