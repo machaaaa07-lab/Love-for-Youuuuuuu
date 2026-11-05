@@ -189,3 +189,35 @@ button:hover {
     padding: 25px 15px;
   }
 }
+
+.memories-container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.memories-top {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: #a52c59;
+  margin-bottom: 18px;
+}
+
+.memories-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px #a52c5930;
+}
+
+.memories-title {
+  color: #e84393;
+  margin-top: 20px;
+}
+
+.black-balloons {
+  font-size: 48px;
+  animation: float 2s infinite ease-in-out;
+}
+
