@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff7f8;
+  color: #29212a;
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  padding: 35px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(145deg, #fff7f8, #fce4ec);
+  animation: fadeIn 0.8s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #8e244d;
+  margin: 15px 0;
+}
+
+h1 {
+  font-size: clamp(30px, 7vw, 48px);
+}
+
+p {
+  color: #705967;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+button {
+  border: none;
+  background: #a52c59;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 15px 5px;
+  box-shadow: 0 5px 18px #a52c5940;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: #771d40;
+}
+
+.small-text {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.gift {
+  font-size: 100px;
+  margin: 25px;
+  animation: float 2s infinite ease-in-out;
+}
+
+.blue-heart {
+  font-size: 130px;
+  animation: heartbeat 1.3s infinite;
+}
+
+.camera, .envelope {
+  font-size: 100px;
+  margin: 20px;
+}
+
+.balloons, .final-hearts {
+  font-size: 55px;
+  margin: 25px;
+  animation: float 2s infinite ease-in-out;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  width: min(100%, 400px);
+  margin: 25px auto;
+}
+
+.photo {
+  background: white;
+  height: 145px;
+  border: 8px solid white;
+  border-bottom: 22px solid white;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px #00000018;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a52c59;
+  font-size: 13px;
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: min(100%, 350px);
+}
+
+.letters button {
+  padding: 15px 10px;
+}
+
+#letterMessage {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 350px;
+  min-height: 40px;
+}
+
+#questions {
+  width: min(100%, 500px);
+}
+
+.question {
+  text-align: left;
+  background: white;
+  padding: 18px;
+  border-radius: 15px;
+  margin: 15px 0;
+  box-shadow: 0 4px 15px #00000008;
+}
+
+.question textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #e5bdce;
+  border-radius: 10px;
+  margin-top: 12px;
+  font: inherit;
+  resize: vertical;
+  outline-color: #a52c59;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 400px) {
+  .photo {
+    height: 120px;
+  }
+
+  .page {
+    padding: 25px 15px;
+  }
+}
